@@ -29,9 +29,9 @@ def reconstruct_from_binary_patterns():
 	showOnMask = False
 
 	scale_factor = 1.0
-	ref_white = cv2.resize(cv2.imread("images/pattern000.jpg", cv2.IMREAD_GRAYSCALE) / 255.0, (0,0), fx=scale_factor,fy=scale_factor)
-	ref_black = cv2.resize(cv2.imread("images/pattern001.jpg", cv2.IMREAD_GRAYSCALE) / 255.0, (0,0), fx=scale_factor,fy=scale_factor)
-	ref_color = cv2.resize(cv2.imread("images/pattern001.jpg"), (0,0), fx=scale_factor,fy=scale_factor)
+	ref_white = cv2.resize(cv2.imread("images/aligned000.jpg", cv2.IMREAD_GRAYSCALE) / 255.0, (0,0), fx=scale_factor,fy=scale_factor)
+	ref_black = cv2.resize(cv2.imread("images/aligned001.jpg", cv2.IMREAD_GRAYSCALE) / 255.0, (0,0), fx=scale_factor,fy=scale_factor)
+	ref_color = cv2.resize(cv2.imread("images/aligned001.jpg"), (0,0), fx=scale_factor,fy=scale_factor)
 	ref_avg   = (ref_white + ref_black) / 2.0
 	ref_on    = ref_avg + 0.05 # a threshold for ON pixels
 	ref_off   = ref_avg - 0.05 # add a small buffer region
